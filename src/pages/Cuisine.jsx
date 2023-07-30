@@ -8,7 +8,7 @@ const Cuisine = () => {
     let params = useParams()
     
     const getCuisine = async (name) =>{
-        const data = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=a337039644f14595880ee76276dd6333&cuisine=${name}`)
+        const data = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${process.env.REACT_APP_API_KEY}&cuisine=${name}`)
         const recipes = await data.json()
         setCuisine(recipes.results)
     }
@@ -22,11 +22,9 @@ const Cuisine = () => {
         {
             cuisine.map((item)=>{
                 return(
-                    <Card key={item.id}>
-                        <Link to={"/recipe/" + item.id}>
+                    <Card key={item.id}>   
                         <img src={item.image} alt="" />
                         <h4>{item.title}</h4>
-                        </Link>
                     </Card>
                 )
             })
