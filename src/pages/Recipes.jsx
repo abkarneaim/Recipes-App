@@ -15,6 +15,7 @@ const Recipes = () => {
     const detailData = await data.json();
     console.log(detailData);
     setDetails(detailData);
+    console.log(detailData);
   };
 
   useEffect(() => {
