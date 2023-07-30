@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import styled from "styled-components";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
+import { Link } from 'react-router-dom';
 
 const Vagee = () => {
   const [veggie, setVeggie] = useState([]);
@@ -17,7 +18,7 @@ const Vagee = () => {
 // }
 // else{
     const api = await fetch(
-      `https://api.spoonacular.com/recipes/random?apiKey=337a49691f70489ba992a090c19ff28d&number=9&tags=vegetarian`
+      `https://api.spoonacular.com/recipes/random?apiKey=a337039644f14595880ee76276dd6333&number=9&tags=vegetarian`
     );
 
     const data = await api.json();
@@ -43,9 +44,11 @@ const Vagee = () => {
           return (
             <SplideSlide key={recipe.id}>
               <Card>
+                <Link to={"/recipes/" + recipe.id}>
                 <p>{recipe.title}</p>
                 <img src={recipe.image} alt={recipe.title} />
                 <Gradiant />
+                </Link>
               </Card>
             </SplideSlide>
           );
