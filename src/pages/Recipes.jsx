@@ -12,9 +12,10 @@ const Recipes = () => {
     );
     const detailData = await data.json();
     setDetails(detailData);
+    console.log(detailData);
   };
   useEffect(() => {
-    fetchDetail();
+    fetchDetail()
   }, [params.name]);
   return (
     <DetailWrapper>
