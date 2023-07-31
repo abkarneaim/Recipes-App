@@ -1,0 +1,15 @@
+.main{
+    display: flex;
+    align-items: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+.img{
+    height: 30px;
+    width: 30px;
+    margin-right: 1rem;
+}
+.text{
+font-size: medium;
+font-weight: 700;
+}
