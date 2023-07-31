@@ -8,7 +8,7 @@ const App = () => {
   return (
     <div className="App">
       <BrowserRouter>
-      <Search/>
+        <Search />
         <Categouries />
         <Pages />
       </BrowserRouter>
