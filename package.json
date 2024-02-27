@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@capacitor/core": "^5.7.0",
+    "@capacitor/ios": "^5.7.0",
     "@splidejs/react-splide": "^0.7.12",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -14,6 +16,7 @@
     "react-icons": "^4.10.1",
     "react-router-dom": "^6.14.2",
     "react-scripts": "5.0.1",
+    "serve": "^14.2.1",
     "styled-components": "^6.0.5",
     "web-vitals": "^2.1.4"
   },
@@ -40,5 +43,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^5.7.0"
   }
 }
